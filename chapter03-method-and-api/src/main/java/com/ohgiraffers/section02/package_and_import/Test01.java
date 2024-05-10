@@ -6,7 +6,6 @@ public class Test01 {
     public static void main(String[] args) {
 
 
-
         String profile = main.java.com.ohgiraffers.section01.method.test.Address("newyork");
 
 

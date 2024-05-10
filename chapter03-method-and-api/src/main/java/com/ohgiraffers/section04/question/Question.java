@@ -31,10 +31,5 @@ public class Question {
         System.out.println("--------test4------------");
 
 
-
-
-
-
-
     }
 }
