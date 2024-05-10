@@ -6,9 +6,18 @@ public class Lotto {
 
     public static void main(String[] args) {
 
+
+        lottoresult();
+
+
+    }
+
+    public static void lottoresult() {
+
         String result = Randomtest.lotto1();
 
         System.out.println("오늘의 로또 번호는 " + result + " 입니다.");
+
 
     }
 
