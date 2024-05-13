@@ -43,7 +43,7 @@ public class Question02 {
                 max = array[i];
 
             // array[i]가 max 보다 크지 않고 secondMax 보다 클 경우 secondMax에 넣어줌. second랑 max가 같을때도 실행
-            }else if(array[i] > secondMax || secondMax == max) {
+            }else if((array[i] > secondMax && array[i] != max) || (secondMax == max && array[i] != max)) {
                 secondMax = array[i];
             }
         }
