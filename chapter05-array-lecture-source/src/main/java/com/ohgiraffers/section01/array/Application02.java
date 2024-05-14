@@ -1,5 +1,6 @@
 package main.java.com.ohgiraffers.section01.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Application02 {
@@ -19,12 +20,20 @@ public class Application02 {
         * 발생한 주소를 레퍼런스 주소에 저장하여 이것을 사용하기 때문에 참조자료형(reference type)이라고 한다
         */
 
-        // 배열을 할당할 시에는 반드시 크리르 지정해주어야 한다
+        // 배열을 할당할 시에는 반드시 크기를 지정해주어야 한다
         iarray = new int[5];
         array = new int[4];
 
         int[] iarr = new int[5];
 
+        System.out.println(Arrays.toString(iarray));
+
+        // iarray 출력
+        for (int i = 0; i < iarray.length; i++) {
+            System.out.print(iarray[i] + " "); // 출력: 0 0 0 0 0
+        }
+
+        System.out.println();
         System.out.println(iarray);
         System.out.println(array);
         System.out.println(iarr);

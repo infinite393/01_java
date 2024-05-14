@@ -1,5 +1,7 @@
 package main.java.com.ohgiraffers.section01.array;
 
+import java.util.Arrays;
+
 public class Application03 {
     public static void main(String[] args) {
 
@@ -15,9 +17,10 @@ public class Application03 {
 
         int[] iarr = new int[5];
         for (int i = 0; i < iarr.length; i++) {
-            System.out.println(iarr[i]);
+            System.out.print(iarr[i]);
         }
 
+        System.out.println();
 
         // 기본값 외의 값으로 초기화를 하고싶은 경우 블럭을 이용한다/
         // 브럭을 사용하는 경우에는 new 연산자를 사용하지 않아도 되며, 값의 갯수만큼 자동으로 크기가 설정된다
@@ -25,6 +28,8 @@ public class Application03 {
         int[] iarr2 = {11, 22, 33, 44, 55};
 
         int[] iarr3 = new int[]{11, 22, 33, 44, 55};
+
+        System.out.println(Arrays.toString(iarr2));
 
         System.out.println("iarr3 = " + iarr2.hashCode());
         System.out.println("iarr3 = " + iarr3.hashCode());
