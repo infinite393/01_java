@@ -15,7 +15,7 @@ public class MemberRepository { // (원래)db 연결부 - (지금)데이터 수�
 
         for(int i = 0; i < newMembers.length; i++){
 
-            if(count != 10) {
+            if(count != 6) {
                 members[count++] = newMembers[i];
             } else {
                 System.out.println("정원 초과");
