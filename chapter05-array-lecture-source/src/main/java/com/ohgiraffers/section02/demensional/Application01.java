@@ -1,5 +1,7 @@
 package main.java.com.ohgiraffers.section02.demensional;
 
+import com.sun.security.jgss.GSSUtil;
+
 import java.security.spec.RSAOtherPrimeInfo;
 
 public class Application01 {
@@ -18,7 +20,7 @@ public class Application01 {
         * 2차원 배열을 사용하는 방법
         * 1. 배열의 주소를 보관할 레퍼런스 변수를 선언
         * 2. 여러 개의 1차원 배열의 주소를 관리하는 배열을 생상
-        * 3. 각 인덱스에서 관리하는 배열을 할당하여 주소를 보관하는 배ㅕㅇㄹ에 저장
+        * 3. 각 인덱스에서 관리하는 배열을 할당하여 주소를 보관하는 배열에 저장
         * 4. 생성한 여러 개의 1차원 배열에 차례로 접근해서 사용
         */
 
@@ -37,25 +39,42 @@ public class Application01 {
 
         iarr2 = new int[3][5];
 
+        System.out.println("---------1-------------");
+
         for (int i = 0; i < iarr1[0].length; i++) {
 
-            System.out.println(iarr1[0][i] + " ");
+            System.out.print(iarr1[0][i] + " ");
 
         }
 
-        for (int i = 0; i < iarr1[1].length; i++) {
-            System.out.println(iarr1[1][i] + " ");
-        }
+        System.out.println();
 
+        System.out.println("----------2-----------");
+
+        for (int i = 0; i < iarr2.length; i++) {
+            System.out.print(iarr1[1][i] + " ");
+        }
+        System.out.println();
+        System.out.println("-------------------------");
+        // iarr1에 값 할당
+        int value = 1;
+        for (int i = 0; i < iarr1.length; i++) {
+            for (int j = 0; j < iarr1[i].length; j++) {
+                iarr1[i][j] = value++;
+                System.out.print(iarr1[i][j] + " ");
+            }
+        }
+        System.out.println();
         System.out.println("-------------------------");
 
-        for (int i = 0; i < iarr1[2].length; i++) {
+        for (int i = 0; i < iarr1.length; i++) {
             for (int j = 0; j < iarr1[i].length; j++) {
 
-                System.out.println(iarr1[i][j] + " ");
+                System.out.print(iarr1[i][j] + " ");
             }
         }
 
+        System.out.println();
 
     }
 }
