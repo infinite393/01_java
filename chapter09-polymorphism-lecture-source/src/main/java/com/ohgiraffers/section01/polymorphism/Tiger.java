@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.polymorphism.section01;
+package main.java.com.ohgiraffers.section01.polymorphism;
 
 public class Tiger extends Animal{
 

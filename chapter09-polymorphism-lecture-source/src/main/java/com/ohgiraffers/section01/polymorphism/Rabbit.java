@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.polymorphism.section01;
+package main.java.com.ohgiraffers.section01.polymorphism;
 
 public class Rabbit extends Animal{
     @Override
@@ -16,7 +16,7 @@ public class Rabbit extends Animal{
         System.out.println("토끼가 울음소리를 냅니다");
     }
 
-    public void jumb(){
+    public void jump(){
         System.out.println("토끼가 점프를 합니다");
     }
 }

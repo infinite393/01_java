@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.polymorphism.section01;
+package main.java.com.ohgiraffers.section01.polymorphism;
 
 public class Application01 {
     public static void main(String[] args) {
@@ -33,7 +33,62 @@ public class Application01 {
         Animal animal = new Animal();
         animal.eat();
         animal.cry();
-        animal.eat();
+        animal.run();
+
+        System.out.println("=====Rabbit 생성====");
+        Rabbit rabbit = new Rabbit();
+        rabbit.eat();
+        rabbit.cry();
+        rabbit.run();
+
+        System.out.println("=====Tiger 생성====");
+        Tiger tiger = new Tiger();
+        tiger.eat();
+        tiger.cry();
+        tiger.run();
+
+        // 부모 타입으로 자식 인스턴스 주소값 지정
+        Animal animal1 = new Rabbit();
+        Animal animal2 = new Tiger();
+
+        // Rabbit r = new Animal();
+
+        // 동적 바인딩 확인
+
+        System.out.println("=====동적 바인딩====");
+        animal1.cry();
+        animal2.cry();
+
+        // animal1.jump();
+        // animal2.bite();
+
+        System.out.println("====클래스 타입의 형변환 확인====");
+
+        ((Rabbit)animal1).jump();
+        ((Tiger)animal2).bite();
+
+        // ((Tiger)animal1).bite();
+
+        // instanceof 연산자 확인
+
+        System.out.println("====instancof 확인=====");
+        System.out.println("animal1이 Tiger와 같은지 " + (animal1 instanceof Tiger));
+        System.out.println("animal1이 Rabit과 같은지 " + (animal1 instanceof Rabbit));
+        System.out.println("animal1이 Animal과 같은지 " + (animal1 instanceof Animal));
+        System.out.println("animal2가 Rabbit과 같은지 " + (animal2 instanceof Rabbit));
+        System.out.println("animal2가 Tiger와 같은지 " + (animal2 instanceof Tiger));
+
+        if(animal1 instanceof Rabbit){
+            ((Rabbit)animal1).jump();
+        }
+
+
+        Animal animal3 = new Rabbit();
+        Animal animal4 = (Animal) new Rabbit();
+
+        // 다운캐스팅
+        Rabbit rabbit1 = (Rabbit) new Animal();
+        Rabbit rabbit2 = (Rabbit)animal4;
 
     }
 }
