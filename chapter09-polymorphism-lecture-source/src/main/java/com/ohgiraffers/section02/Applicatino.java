@@ -24,5 +24,19 @@ public class Applicatino {
         * 추상 메소드의 경우 반드시 abstract 키워드를 메소드를 헤더에 작성해야 한다
         * ex) public abstract void method();
         */
+
+        // Product 클래스는 인스턴스를 생성할 수 없다
+        // Product product = new Product();
+
+        SmartPhone smartPhone = new SmartPhone();
+
+        System.out.println(smartPhone instanceof SmartPhone);
+        System.out.println(smartPhone instanceof Product);
+
+        Product product = new SmartPhone();
+        product.abstractMethod();
+        product.nonStaticMethod();
+
+        Product.staticMethod();
     }
 }
