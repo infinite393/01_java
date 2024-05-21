@@ -40,7 +40,7 @@ public class MemberService{
                 break;
             default:
                 System.out.println("Invalid Auth Type");
-                return;
+                break;
         }
 
     }
